@@ -67,7 +67,7 @@ document.getElementById('upload').addEventListener('change', function(e) {
                 document.getElementById('percentage').textContent = percent + '%';
                 if (percent >= 100) {
                     clearInterval(interval);
-                    showResult(img);
+                    showResult();
                 }
             }, 50); // Adjust for scan duration (5 seconds total)
         };
@@ -75,26 +75,12 @@ document.getElementById('upload').addEventListener('change', function(e) {
     reader.readAsDataURL(file);
 });
 
-function showResult(img) {
-    // Create a canvas to analyze pixel data
-    const canvas = document.createElement('canvas');
-    canvas.width = img.naturalWidth;
-    canvas.height = img.naturalHeight;
-    const ctx = canvas.getContext('2d');
-    ctx.drawImage(img, 0, 0);
-    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
-
-    let hash = 0;
-    for (let i = 0; i < imageData.length; i += 4) {
-        hash = ((hash * 31) + imageData[i]) >>> 0; // Multiplicative hash on red channel for better distribution (unsigned 32-bit)
-    }
-
-    const seed = hash;
-    const gameIndex = seed % games.length;
+function showResult() {
+    // True randomness for variety each time
+    const gameIndex = Math.floor(Math.random() * games.length);
     const game = games[gameIndex];
 
-    const charSeed = seed * 2;
-    const charIndex = charSeed % game.characters.length;
+    const charIndex = Math.floor(Math.random() * game.characters.length);
     const character = game.characters[charIndex];
 
     document.getElementById('overlay').style.display = 'none';
