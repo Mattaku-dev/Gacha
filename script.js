@@ -2,61 +2,47 @@ const games = [
     {
         name: "Genshin Impact",
         characters: [
-            { name: "Albedo", image: "https://static.wikia.nocookie.net/genshin-impact/images/b/b3/Character_Albedo_Icon.png/revision/latest" },
-            { name: "Alhaitham", image: "https://static.wikia.nocookie.net/genshin-impact/images/1/1c/Character_Alhaitham_Icon.png/revision/latest" },
-            { name: "Arataki Itto", image: "https://static.wikia.nocookie.net/genshin-impact/images/4/4b/Character_Arataki_Itto_Icon.png/revision/latest" },
-            { name: "Arlecchino", image: "https://static.wikia.nocookie.net/genshin-impact/images/7/75/Character_Arlecchino_Icon.png/revision/latest" },
-            { name: "Baizhu", image: "https://static.wikia.nocookie.net/genshin-impact/images/0/0f/Character_Baizhu_Icon.png/revision/latest" },
-            { name: "Chasca", image: "https://static.wikia.nocookie.net/genshin-impact/images/3/37/Character_Chasca_Icon.png/revision/latest" },
-            { name: "Chiori", image: "https://static.wikia.nocookie.net/genshin-impact/images/5/58/Character_Chiori_Icon.png/revision/latest" },
-            { name: "Citlali", image: "https://static.wikia.nocookie.net/genshin-impact/images/6/68/Character_Citlali_Icon.png/revision/latest" },
-            { name: "Clorinde", image: "https://static.wikia.nocookie.net/genshin-impact/images/2/2f/Character_Clorinde_Icon.png/revision/latest" },
-            { name: "Cyno", image: "https://static.wikia.nocookie.net/genshin-impact/images/8/80/Character_Cyno_Icon.png/revision/latest" }
+            "Albedo", "Alhaitham", "Aloy", "Amber", "Arataki Itto", "Arlecchino", "Baizhu", "Barbara", "Beidou", "Bennett",
+            "Candace", "Charlotte", "Chasca", "Chevreuse", "Chiori", "Chongyun", "Citlali", "Clorinde", "Collei", "Cyno",
+            "Dahlia", "Dehya", "Diluc", "Diona", "Dori", "Emilie", "Escoffier", "Eula", "Faruzan", "Fischl",
+            "Freminet", "Furina", "Gaming", "Ganyu", "Gorou", "Hu Tao", "Iansan", "Ifa", "Jean", "Kachina",
+            "Kaedehara Kazuha", "Kaeya", "Kamisato Ayaka", "Kamisato Ayato", "Kaveh", "Keqing", "Kinich", "Kirara", "Klee", "Kujou Sara",
+            "Kuki Shinobu", "Lan Yan", "Layla", "Lisa", "Lynette", "Lyney", "Mavuika", "Mika", "Mona", "Mualani",
+            "Nahida", "Navia", "Neuvillette", "Nilou", "Ningguang", "Noelle", "Ororon", "Qiqi", "Raiden Shogun", "Razor",
+            "Rosaria", "Sangonomiya Kokomi", "Sayu", "Sethos", "Shenhe", "Shikanoin Heizou", "Sigewinne", "Skirk", "Sucrose", "Tartaglia",
+            "Thoma", "Tighnari", "Traveler", "Varesa", "Venti", "Wanderer", "Wriothesley", "Xiangling", "Xianyun", "Xiao",
+            "Xilonen", "Xingqiu", "Xinyan", "Yae Miko", "Yanfei", "Yaoyao", "Yelan", "Yoimiya", "Yumemizuki Mizuki", "Yun Jin",
+            "Zhongli"
         ]
     },
     {
         name: "Zenless Zone Zero",
         characters: [
-            { name: "Alexandrina Sebastiane", image: "https://static.wikia.nocookie.net/zenless-zone-zero/images/4/4d/Alexandrina_Sebastiane_Icon.png/revision/latest" },
-            { name: "Anby Demara", image: "https://static.wikia.nocookie.net/zenless-zone-zero/images/4/4a/Anby_Demara_Icon.png/revision/latest" },
-            { name: "Anton Ivanov", image: "https://static.wikia.nocookie.net/zenless-zone-zero/images/7/7f/Anton_Ivanov_Icon.png/revision/latest" },
-            { name: "Asaba Harumasa", image: "https://static.wikia.nocookie.net/zenless-zone-zero/images/1/1e/Asaba_Harumasa_Icon.png/revision/latest" },
-            { name: "Astra Yao", image: "https://static.wikia.nocookie.net/zenless-zone-zero/images/0/0b/Astra_Yao_Icon.png/revision/latest" },
-            { name: "Ben Bigger", image: "https://static.wikia.nocookie.net/zenless-zone-zero/images/7/7e/Ben_Bigger_Icon.png/revision/latest" },
-            { name: "Billy Kid", image: "https://static.wikia.nocookie.net/zenless-zone-zero/images/6/6a/Billy_Kid_Icon.png/revision/latest" },
-            { name: "Burnice White", image: "https://static.wikia.nocookie.net/zenless-zone-zero/images/0/0f/Burnice_White_Icon.png/revision/latest" },
-            { name: "Caesar King", image: "https://static.wikia.nocookie.net/zenless-zone-zero/images/3/3d/Caesar_King_Icon.png/revision/latest" },
-            { name: "Corin Wickes", image: "https://static.wikia.nocookie.net/zenless-zone-zero/images/3/3e/Corin_Wickes_Icon.png/revision/latest" }
+            "Alexandrina Sebastiane", "Anby Demara", "Anton Ivanov", "Asaba Harumasa", "Astra Yao", "Ben Bigger", "Billy Kid", "Burnice White", "Caesar King", "Corin Wickes",
+            "Ellen Joe", "Evelyn Chevalier", "Grace Howard", "Hoshimi Miyabi", "Hugo Vlad", "Jane Doe", "Ju Fufu", "Koleda Belobog", "Lighter", "Luciana de Montefio",
+            "Nekomiya Mana", "Nicole Demara", "Pan Yinhu", "Piper Wheel", "Pulchra Fellini", "Qingyi", "Seth Lowell", "Soldier 0 - Anby", "Soldier 11", "Soukaku",
+            "Trigger", "Tsukishiro Yanagi", "Ukinami Yuzuha", "Vivian Banshee", "Von Lycaon", "Yixuan", "Zhu Yuan"
         ]
     },
     {
         name: "Wuthering Waves",
         characters: [
-            { name: "Aalto", image: "https://static.wikia.nocookie.net/wutheringwaves/images/f/f2/Icon_Aalto.png/revision/latest" },
-            { name: "Baizhi", image: "https://static.wikia.nocookie.net/wutheringwaves/images/4/4b/Icon_Baizhi.png/revision/latest" },
-            { name: "Calcharo", image: "https://static.wikia.nocookie.net/wutheringwaves/images/3/3f/Icon_Calcharo.png/revision/latest" },
-            { name: "Changli", image: "https://static.wikia.nocookie.net/wutheringwaves/images/6/6d/Icon_Changli.png/revision/latest" },
-            { name: "Chixia", image: "https://static.wikia.nocookie.net/wutheringwaves/images/2/2f/Icon_Chixia.png/revision/latest" },
-            { name: "Encore", image: "https://static.wikia.nocookie.net/wutheringwaves/images/0/0d/Icon_Encore.png/revision/latest" },
-            { name: "Jiyan", image: "https://static.wikia.nocookie.net/wutheringwaves/images/9/9e/Icon_Jiyan.png/revision/latest" },
-            { name: "Lingyang", image: "https://static.wikia.nocookie.net/wutheringwaves/images/8/8a/Icon_Lingyang.png/revision/latest" },
-            { name: "Verina", image: "https://static.wikia.nocookie.net/wutheringwaves/images/4/4e/Icon_Verina.png/revision/latest" },
-            { name: "Yinlin", image: "https://static.wikia.nocookie.net/wutheringwaves/images/5/5d/Icon_Yinlin.png/revision/latest" }
+            "Aalto", "Baizhi", "Brant", "Calcharo", "Camellya", "Cantarella", "Carlotta", "Cartethyia", "Changli", "Chixia",
+            "Ciaccona", "Danjin", "Encore", "Jianxin", "Jinhsi", "Jiyan", "Lingyang", "Lumi", "Lupa", "Mortefi",
+            "Phoebe", "Phrolova", "Roccia", "Rover-Aero", "Rover-Havoc", "Rover-Spectro", "Sanhua", "Shorekeeper", "Taoqi", "Verina",
+            "Xiangli Yao", "Yangyang", "Yinlin", "Youhu", "Yuanwu", "Zani", "Zhezhi"
         ]
     },
     {
         name: "Honkai Star Rail",
         characters: [
-            { name: "Acheron", image: "https://static.wikia.nocookie.net/honkai-star-rail/images/7/76/Character_Acheron_Icon.png/revision/latest" },
-            { name: "Argenti", image: "https://static.wikia.nocookie.net/honkai-star-rail/images/6/6f/Character_Argenti_Icon.png/revision/latest" },
-            { name: "Aventurine", image: "https://static.wikia.nocookie.net/honkai-star-rail/images/2/25/Character_Aventurine_Icon.png/revision/latest" },
-            { name: "Bailu", image: "https://static.wikia.nocookie.net/honkai-star-rail/images/5/50/Character_Bailu_Icon.png/revision/latest" },
-            { name: "Black Swan", image: "https://static.wikia.nocookie.net/honkai-star-rail/images/7/75/Character_Black_Swan_Icon.png/revision/latest" },
-            { name: "Blade", image: "https://static.wikia.nocookie.net/honkai-star-rail/images/6/62/Character_Blade_Icon.png/revision/latest" },
-            { name: "Boothill", image: "https://static.wikia.nocookie.net/honkai-star-rail/images/1/1d/Character_Boothill_Icon.png/revision/latest" },
-            { name: "Bronya", image: "https://static.wikia.nocookie.net/honkai-star-rail/images/2/2e/Character_Bronya_Icon.png/revision/latest" },
-            { name: "Clara", image: "https://static.wikia.nocookie.net/honkai-star-rail/images/5/59/Character_Clara_Icon.png/revision/latest" },
-            { name: "Dan Heng • Imbibitor Lunae", image: "https://static.wikia.nocookie.net/honkai-star-rail/images/3/3f/Character_Dan_Heng_%E2%80%A2_Imbibitor_Lunae_Icon.png/revision/latest" }
+            "Acheron", "Aglaea", "Anaxa", "Archer", "Argenti", "Arlan", "Asta", "Aventurine", "Bailu", "Black Swan",
+            "Blade", "Boothill", "Bronya", "Castorice", "Cipher", "Clara", "Dan Heng", "Dan Heng • Imbibitor Lunae", "Dr. Ratio", "Feixiao",
+            "Firefly", "Fu Xuan", "Fugue", "Gallagher", "Gepard", "Guinaifen", "Hanya", "Herta", "Himeko", "Hook",
+            "Huohuo", "Hyacine", "Jade", "Jiaoqiu", "Jing Yuan", "Jingliu", "Kafka", "Lingsha", "Luka", "Luocha",
+            "Lynx", "March 7th", "Misha", "Moze", "Natasha", "Pela", "Phainon", "Qingque", "Rappa", "Robin",
+            "Ruan Mei", "Saber", "Sampo", "Seele", "Serval", "Silver Wolf", "Sparkle", "Sunday", "Sushang", "The Herta",
+            "Tingyun", "Topaz & Numby", "Trailblazer", "Tribbie", "Welt", "Xueyi", "Yanqing", "Yukong", "Yunli"
         ]
     }
 ];
@@ -105,7 +91,6 @@ function showResult(img) {
     const resultDiv = document.getElementById('result');
     resultDiv.innerHTML = `
         <h2>You best align with ${game.name}!</h2>
-        <p>Your new best friend is ${character.name}!</p>
-        <img src="${character.image}" alt="${character.name}">
+        <p>Your new best friend is ${character}!</p>
     `;
 }
