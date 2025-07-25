@@ -76,7 +76,7 @@ document.getElementById('upload').addEventListener('change', function(e) {
 });
 
 function showResult(img) {
-    // Create a canvas to analyze pixel data for a better "seed" based on image content
+    // Create a canvas to analyze pixel data
     const canvas = document.createElement('canvas');
     canvas.width = img.naturalWidth;
     canvas.height = img.naturalHeight;
@@ -84,17 +84,17 @@ function showResult(img) {
     ctx.drawImage(img, 0, 0);
     const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
 
-    let sum = 0;
+    let hash = 0;
     for (let i = 0; i < imageData.length; i += 4) {
-        sum += imageData[i]; // Sum red channel values for a content-based hash
+        hash = ((hash * 31) + imageData[i]) >>> 0; // Multiplicative hash on red channel for better distribution (unsigned 32-bit)
     }
 
-    const seed = Math.abs(sum); // Ensure positive
+    const seed = hash;
     const gameIndex = seed % games.length;
     const game = games[gameIndex];
 
     const charSeed = seed * 2;
-    const charIndex = Math.abs(charSeed) % game.characters.length;
+    const charIndex = charSeed % game.characters.length;
     const character = game.characters[charIndex];
 
     document.getElementById('overlay').style.display = 'none';
