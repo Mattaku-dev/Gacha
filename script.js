@@ -76,13 +76,25 @@ document.getElementById('upload').addEventListener('change', function(e) {
 });
 
 function showResult(img) {
-    // Use image dimensions as a simple "seed" for deterministic randomness based on the uploaded image
-    const seed = img.naturalWidth + img.naturalHeight;
+    // Create a canvas to analyze pixel data for a better "seed" based on image content
+    const canvas = document.createElement('canvas');
+    canvas.width = img.naturalWidth;
+    canvas.height = img.naturalHeight;
+    const ctx = canvas.getContext('2d');
+    ctx.drawImage(img, 0, 0);
+    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+
+    let sum = 0;
+    for (let i = 0; i < imageData.length; i += 4) {
+        sum += imageData[i]; // Sum red channel values for a content-based hash
+    }
+
+    const seed = Math.abs(sum); // Ensure positive
     const gameIndex = seed % games.length;
     const game = games[gameIndex];
 
-    const charSeed = seed * 2; // Simple variation
-    const charIndex = charSeed % game.characters.length;
+    const charSeed = seed * 2;
+    const charIndex = Math.abs(charSeed) % game.characters.length;
     const character = game.characters[charIndex];
 
     document.getElementById('overlay').style.display = 'none';
